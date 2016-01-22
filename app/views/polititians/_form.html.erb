@@ -1,0 +1,17 @@
+<%= form_for(@polititian) do |f| %>
+  <% if @polititian.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@polititian.errors.count, "error") %> prohibited this polititian from being saved:</h2>
+
+      <ul>
+      <% @polititian.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
