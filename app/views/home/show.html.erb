@@ -1,0 +1,24 @@
+<div class="head-area">
+	<div class="header-text">
+		<h1>Welcome To Politichirp</h1>
+		<p>
+			Home of the craziest shit ever said
+		</p>
+	</div>
+</div>
+
+<div class="pundit-area">
+	<% if @polititians.any? %>
+		<% @polititians.each do |pundit|%>
+			<div class="pundit">
+				<div class="pundit-info">
+					<h2><%= pundit.name %></h2>
+					<h3><%= pundit.twitter_handle %></h3>
+				</div>
+				<div class="puntid-tweet">
+					
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+</div>

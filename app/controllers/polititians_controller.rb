@@ -69,6 +69,6 @@ class PolititiansController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def polititian_params
-      params[:polititian]
+      params.require(:polititian).permit(:name, :avatar, :feature_image, :twitter_handle, :link)
     end
 end

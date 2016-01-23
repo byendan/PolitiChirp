@@ -1,3 +1,36 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  margin: 0;
+}
+.head-area {
+  width: 100%;
+  height: auto;
+  background-color: #28A9E0;
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  margin: 0px;
+  padding: 10px;
+   h1 {
+     font-weight: 500;
+     font-size: 2.8em;
+   }
+   
+   p {
+     margin-top: 20px;
+     margin-left: 15px;
+     font-weight: 400;
+     font-size: 1.6em;
+   }
+}
+
+.pundit-area {
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: solid 1px grey;
+  height: 600px;
+}
