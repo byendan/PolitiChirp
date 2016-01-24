@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admins, controllers: { sessions: "admins/sessions"}
+  #devise_for :admins, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
   resources :polititians
   root 'home#show'
   # The priority is based upon order of creation: first created -> highest priority.
