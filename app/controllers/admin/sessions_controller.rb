@@ -15,6 +15,10 @@ class Admin::SessionsController < Devise::SessionsController
   # def destroy
   #   super
   # end
+  
+  def show
+    @polititians = Polititian.all
+  end
 
   # protected
 

@@ -1,0 +1,21 @@
+<div class="pundit-area">
+	<% if @polititians.any? %>
+		<% @polititians.each do |pundit|%>
+			<div class="pundit">
+				<div class="pundit-info">
+					<h2><%= pundit.name %></h2>
+					<h3><%= pundit.twitter_handle %></h3>
+					<br />
+					<div class="edit-button">
+						<%= link_to "Edit Pundit", edit_polititian_path(pundit)%>
+					
+					</div>
+				</div>
+				<div class="pundit-tweet">
+					<p>Here is a sample tweet</p>
+				</div>
+				
+			</div>
+		<% end %>
+	<% end %>
+</div>
