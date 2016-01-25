@@ -8,7 +8,10 @@
 					<br />
 					<div class="edit-button">
 						<%= link_to "Edit Pundit", edit_polititian_path(pundit)%>
-					
+					</div>
+					<div class="delete-button">
+						<%= button_to "Delete", pundit, method: :delete, 
+												data: {confirm: "Delete: #{pundit.name}?"} %>
 					</div>
 				</div>
 				<div class="pundit-tweet">

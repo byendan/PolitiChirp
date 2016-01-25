@@ -10,6 +10,23 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="form-area">
+  	<%= f.label :name %><br />
+  	<%= f.text_field :name%><br />
+  	
+  	<%= f.label :avatar %><br />
+  	<%= f.text_field :avatar %><br />
+  	
+  	<%= f.label :feature_image %><br />
+  	<%= f.text_field :feature_image %><br />
+  	
+  	<%= f.label :twitter_handle %><br />
+  	<%= f.text_field :twitter_handle %><br />
+  	
+  	<%= f.label :link %><br />
+  	<%= f.text_field :link %><br />
+  </div>
 
   <div class="actions">
     <%= f.submit %>

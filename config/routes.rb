@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :admin, controllers: { sessions: "admin/sessions"}
   #devise_for :admin, path: "auth", path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
   resources :polititians
+  delete 'delete_polititian' => 'polititians#destroy'
   root 'home#show'
   devise_scope :admin do 
     get 'admin/panel' => 'admin/sessions#show'

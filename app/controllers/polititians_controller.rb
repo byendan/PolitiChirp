@@ -28,7 +28,7 @@ class PolititiansController < ApplicationController
 
     respond_to do |format|
       if @polititian.save
-        format.html { redirect_to @polititian, notice: 'Polititian was successfully created.' }
+        format.html { redirect_to admin_panel_url, notice: 'Polititian was successfully created.' }
         format.json { render :show, status: :created, location: @polititian }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class PolititiansController < ApplicationController
   def update
     respond_to do |format|
       if @polititian.update(polititian_params)
-        format.html { redirect_to @polititian, notice: 'Polititian was successfully updated.' }
+        format.html { redirect_to admin_panel_url, notice: 'Polititian was successfully updated.' }
         format.json { render :show, status: :ok, location: @polititian }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class PolititiansController < ApplicationController
   def destroy
     @polititian.destroy
     respond_to do |format|
-      format.html { redirect_to polititians_url, notice: 'Polititian was successfully destroyed.' }
+      format.html { redirect_to admin_panel_url, notice: 'Polititian was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
