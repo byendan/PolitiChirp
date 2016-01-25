@@ -6,10 +6,15 @@
 #
 valid_pundit:
  name: "name"
- avatar: "me.png"
- feature_image: "big_me.png"
+ avatar: "http://photos1.blogger.com/x/blogger/7704/2509/320/243705/joe%20cool.jpg"
+ feature_image: "https://punditfromanotherplanet.files.wordpress.com/2014/06/barack_obama-whipped.jpg"
  twitter_handle: "@me"
  link: "me.twitter.com"
 
-invalid_pundit: {}
+invalid_pundit:
+  name: ""
+  avatar: "yup.com"
+  feature_image: "no.pdf"
+  twitter_handle: "itsme"
+  link: "blablabla"
   
