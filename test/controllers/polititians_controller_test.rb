@@ -1,8 +1,8 @@
 require 'test_helper'
-
+require 'controller_helper'
 class PolititiansControllerTest < ActionController::TestCase
   setup do
-    @polititian = polititians(:one)
+    @pundit = polititians(:valid_pundit)
   end
 
   test "should get index" do
@@ -18,32 +18,34 @@ class PolititiansControllerTest < ActionController::TestCase
 
   test "should create polititian" do
     assert_difference('Polititian.count') do
-      post :create, polititian: {  }
+      post :create, polititian: {name: @pundit.name, avatar: @pundit.avatar,
+         feature_image: @pundit.feature_image, twitter_handle: @pundit.twitter_handle, 
+         link: @pundit.link }
     end
 
-    assert_redirected_to polititian_path(assigns(:polititian))
+    assert_redirected_to admin_panel_path
   end
 
   test "should show polititian" do
-    get :show, id: @polititian
+    get :show, id: @pundit
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @polititian
+    get :edit, id: @pundit
     assert_response :success
   end
 
   test "should update polititian" do
-    patch :update, id: @polititian, polititian: {  }
-    assert_redirected_to polititian_path(assigns(:polititian))
+    patch :update, id: @pundit, polititian: {name: "newNameYeah!"  }
+    assert_redirected_to admin_panel_path
   end
 
   test "should destroy polititian" do
     assert_difference('Polititian.count', -1) do
-      delete :destroy, id: @polititian
+      delete :destroy, id: @pundit
     end
 
-    assert_redirected_to polititians_path
+    assert_redirected_to admin_panel_path
   end
 end

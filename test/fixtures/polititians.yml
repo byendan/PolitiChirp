@@ -4,8 +4,12 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+valid_pundit:
+ name: "name"
+ avatar: "me.png"
+ feature_image: "big_me.png"
+ twitter_handle: "@me"
+ link: "me.twitter.com"
+
+invalid_pundit: {}
+  
