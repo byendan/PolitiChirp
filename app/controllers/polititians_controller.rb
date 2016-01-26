@@ -10,6 +10,7 @@ class PolititiansController < ApplicationController
   # GET /polititians/1
   # GET /polititians/1.json
   def show
+    @pundit = Polititian.find_by(params[:id])
   end
 
   # GET /polititians/new
@@ -66,6 +67,8 @@ class PolititiansController < ApplicationController
     def set_polititian
       @polititian = Polititian.find(params[:id])
     end
+    
+    def 
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def polititian_params

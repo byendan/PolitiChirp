@@ -9,16 +9,8 @@
 
 <div class="pundit-area">
 	<% if @polititians.any? %>
-		<% @polititians.each do |pundit|%>
-			<div class="pundit">
-				<div class="pundit-info">
-					<h2><%= pundit.name %></h2>
-					<h3><%= pundit.twitter_handle %></h3>
-				</div>
-				<div class="pundit-tweet">
-					<p>Here is a sample tweet</p>
-				</div>
-			</div>
+		<% @polititians.each do |p|%>
+			<%= render template: 'home/_pundit', locals: {pundit: p} %>
 		<% end %>
 	<% end %>
 </div>
