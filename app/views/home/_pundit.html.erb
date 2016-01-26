@@ -2,8 +2,10 @@
 	<div class="pundit-info">
 		<h2><%= pundit[:name] %></h2>
 		<h3><%= "@#{pundit[:screen_name]}"%></h3>
+		<%= image_tag(pundit[:avatar], size: "50x50", alt: "#{pundit[:name]} image")%>
+		<%= link_to "View the #{pundit[:name]} site",  pundit[:link], "target": "_blank"%>
 	</div>
 	<div class="pundit-tweet">
-		<p>Here is a sample tweet</p>
+		<p><%= pundit[:last_tweet]%></p>
 	</div>
 </div>

@@ -37,11 +37,7 @@ ActiveRecord::Schema.define(version: 20160124001948) do
   end
 
   create_table "polititians", force: :cascade do |t|
-    t.string   "name"
-    t.string   "avatar"
-    t.string   "feature_image"
     t.string   "twitter_handle"
-    t.string   "link"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
