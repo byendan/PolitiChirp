@@ -41,7 +41,7 @@ body {
   .pundit {
     position: relative;
     width: 100%;
-    height: 150px;
+    height: 200px;
     border-radius: 10px;
     border: solid 1px grey;
     background-color: #DDDDDD;
@@ -51,7 +51,7 @@ body {
         position: absolute;
         display: inline-block;
         width: 200px;
-        height: 150px;
+        height: 200px;
         border-right: solid 1px black;
         background-color: #82D465;
         border-top-left-radius: 10px;
@@ -67,6 +67,33 @@ body {
       height: auto;
       left: 250px;
       top: 20px;
+      
+      p {
+        font-size: 2.0em;
+        line-height: 25px;
+      }
     }
   }
 }
+
+.panel-pundit-area {
+    margin-top: 20px;
+    padding: 20px;
+    width: auto;
+    max-width: 900px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+   
+   .panel-pundit {
+      float: left;
+      margin: 15px;
+      padding: 15px;
+      width: auto;
+      height: auto;
+      border-radius: 10px;
+      border: solid 1px grey;
+      background-color: #82D465;  
+    } 
+  }
