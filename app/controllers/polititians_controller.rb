@@ -68,10 +68,10 @@ class PolititiansController < ApplicationController
       @polititian = Polititian.find(params[:id])
     end
     
-    def 
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def polititian_params
-      params.require(:polititian).permit(:name, :avatar, :feature_image, :twitter_handle, :link)
+      params.require(:polititian).permit(:twitter_handle)
     end
 end
