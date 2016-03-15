@@ -1,5 +1,6 @@
 class Admin::SessionsController < Devise::SessionsController
 # before_filter :configure_sign_in_params, only: [:create]
+skip_before_action :authorize 
 
   # GET /resource/sign_in
   # def new
@@ -15,7 +16,7 @@ class Admin::SessionsController < Devise::SessionsController
   # def destroy
   #   super
   # end
-  
+
   def show
     @polititians = Polititian.all
   end

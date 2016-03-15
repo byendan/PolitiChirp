@@ -1,4 +1,5 @@
 class PolititiansController < ApplicationController
+  skip_before_action :authorize, only: [:show]
   before_action :set_polititian, only: [:show, :edit, :update, :destroy]
 
   # GET /polititians
@@ -67,7 +68,7 @@ class PolititiansController < ApplicationController
     def set_polititian
       @polititian = Polititian.find(params[:id])
     end
-    
+
 
 
     # Never trust parameters from the scary internet, only allow the white list through.
