@@ -6,9 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-pundits = ["BernieSanders", "HillaryClinton", "realDonaldTrump", "JebBush", "RealBenCarson", "ChrisChristie", 
-            "tedcruz", "CarlyFiorina", "gov_gilmore", "GovMikeHuckabee", "JohnKasich",
-            "RandPaul", "marcorubio", "RickSantorum"]
+pundits = ["BernieSanders", "HillaryClinton", "realDonaldTrump",
+            "tedcruz", "JohnKasich",
+             "marcorubio"]
 
 pundits.each {|p| Polititian.create(twitter_handle: p)}
-
