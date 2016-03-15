@@ -1,0 +1,15 @@
+
+<div class="cand-box">
+  <div class="cand-top-bar">
+    <h2><%= polititian[:name] %></h2>
+  </div>
+  <div class="cand-info">
+    <div class="cand-left">
+      <%= image_tag(polititian[:avatar], size: "75x75", alt: "#{polititian[:name]} image") %>
+      <%= link_to "View the #{polititian[:name]} site", polititian[:link], target: "_blank" %>
+    </div>
+    <div class="cand-right">
+      <h3><strong><%= "@#{polititian[:screen_name]} "%></strong> <%=" #{polititian[:last_tweet]}" %></h3>
+    </div>
+  </div>
+</div>

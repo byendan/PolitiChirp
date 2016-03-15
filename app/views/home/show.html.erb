@@ -10,7 +10,7 @@
 <div class="pundit-area">
 	<% if @polititians.any? %>
 		<% @polititians.each do |p|%>
-			<%= render template: 'home/_pundit', locals: {pundit: p} %>
+			<%= render partial: 'polititians/polititian', locals: {polititian: p} %>
 		<% end %>
 	<% end %>
 </div>
